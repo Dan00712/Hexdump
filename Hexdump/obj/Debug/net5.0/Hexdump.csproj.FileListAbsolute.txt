@@ -1,0 +1,16 @@
+D:\__Programming\C#\Hexdump\Hexdump\obj\Debug\net5.0\Hexdump.csproj.AssemblyReference.cache
+D:\__Programming\C#\Hexdump\Hexdump\obj\Debug\net5.0\Hexdump.GeneratedMSBuildEditorConfig.editorconfig
+D:\__Programming\C#\Hexdump\Hexdump\obj\Debug\net5.0\Hexdump.AssemblyInfoInputs.cache
+D:\__Programming\C#\Hexdump\Hexdump\obj\Debug\net5.0\Hexdump.AssemblyInfo.cs
+D:\__Programming\C#\Hexdump\Hexdump\obj\Debug\net5.0\Hexdump.csproj.CoreCompileInputs.cache
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\Hexdump.exe
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\Hexdump.deps.json
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\Hexdump.runtimeconfig.json
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\Hexdump.runtimeconfig.dev.json
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\Hexdump.dll
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\ref\Hexdump.dll
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\Hexdump.pdb
+D:\__Programming\C#\Hexdump\Hexdump\obj\Debug\net5.0\Hexdump.dll
+D:\__Programming\C#\Hexdump\Hexdump\obj\Debug\net5.0\ref\Hexdump.dll
+D:\__Programming\C#\Hexdump\Hexdump\obj\Debug\net5.0\Hexdump.pdb
+D:\__Programming\C#\Hexdump\Hexdump\obj\Debug\net5.0\Hexdump.genruntimeconfig.cache

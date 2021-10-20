@@ -1,0 +1,5 @@
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\publish\Hexdump.exe
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\publish\Hexdump.dll
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\publish\Hexdump.deps.json
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\publish\Hexdump.runtimeconfig.json
+D:\__Programming\C#\Hexdump\Hexdump\bin\Debug\net5.0\publish\Hexdump.pdb
