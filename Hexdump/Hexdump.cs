@@ -28,6 +28,10 @@ namespace Hexdump{
 			StreamWriter dst = null;
 			
 			if(_params.CustomDest){
+				
+				if(File.Exists(_params.Dst)){
+					File.WriteAllText(_params.Dst, String.Empty);
+				}
 				dst = new StreamWriter(new FileStream(_params.Dst, FileMode.OpenOrCreate, FileAccess.Write));
 			}
 

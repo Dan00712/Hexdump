@@ -8,7 +8,7 @@ namespace Hexdump{
 		public bool CustomColors{get;set;}
 		public ConsoleColor Front{get;set;}
 		public ConsoleColor Back{get;set;}
-				public int Lines{get;set;}
+		public int Lines{get;set;}
 		public int Offset{get;set;}
 		public string Source{get;set;}
 

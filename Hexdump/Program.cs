@@ -3,67 +3,64 @@
 namespace Hexdump{
     class Program{
         static void Main(string[] args){
-            Hexdump hexdump= new Hexdump(new HexdumpParams(){
-				CustomDest= false,
-				PrintToConsole=true,
-				CustomColors=true,
-				Front = ConsoleColor.DarkGreen,
-				Back =ConsoleColor.Black,
-				Dst=null,
-				Source = args[0]
-			});
-
-			hexdump.Generate();
+			var tmp = ParseParams(args);
+			if(tmp is not null){
+				System.Console.WriteLine("OFfset:\t{0}", tmp.Offset);
+				System.Console.WriteLine("Lines:\t{0}", tmp.Lines);
+            	Hexdump hexdump= new Hexdump(tmp);
+				hexdump.Generate();
+			}
+			else{
+				System.Console.WriteLine("Error while Parsing Parameters");
+			}
         }
 
-		/*static HexdumpParams ParseCmdParams(string[] args){
-			HexdumpParams parameters = new HexdumpParams();
+		static HexdumpParams ParseParams(String[] args){
+			HexdumpParams par = new HexdumpParams();
+			if(args.Length==0){
+				return null;
+			}
+			if(args.Length>=1){
+				par.Source = args[0];
+			}
 
-			for(int i= 0; i<args.Length; i++){
+			par.CustomColors= false;
 
+			for(int i= 0; i< args.Length; i++){
 				switch(args[i]){
-					case "-s":
-						parameters.Source = args[++i];
-						break;
-					case "--source":
-						parameters.Source = args[++i];
+					case "--no-PTC":
+						par.PrintToConsole=false;
 						break;
 					
-					case "-CCC":
-						parameters.CustomColors = true;
-						break;
-					case "--sustomColourColors":
-						parameters.CustomColors = true;
-						break;
-					
-					case "-NPTC":
-						parameters.PrintToConsole=false;
-						break;
-					
-					case "-o":
-						parameters.Offset = int.Parse(args[++i]);
-						break;
-					case "--offset":
-						parameters.Offset = int.Parse(args[++i]);
-						break;
-
 					case "-d":
-						parameters.CustomDest= true;
-						parameters.Dst = args[++i];
-						break;
 					case "--dest":
-						parameters.CustomDest= true;
-						parameters.Dst = args[++i];
+						par.CustomDest= true;
+						par.Dst= args[++i].EndsWith(".hexdump") ? args[i] : args[i] + "hexdump";
+						break;
+					
+					case "-dS":
+					case "-destBasedSource":
+						par.CustomDest = true;
+						par.Dst = par.Source+".hexdump";
+						break;
+					
+					case "-l":
+					case "--lines":
+						System.Console.WriteLine("{0}\t{1}", args[i], args[i+1]);
+						par.Lines = int.Parse(args[++i]);
 						break;
 
+					case "-o":
+					case "--offset":
+						System.Console.WriteLine("{0}\t{1}", args[i], args[i+1]);
+						par.Offset = int.Parse(args[++i]);
+						break;
+					
 					default:
-						System.Console.WriteLine("Invalid Cmd args");
 						break;
 				}
-				
 			}
-			parameters.CustomColors=false;
-				return parameters;
-		}//*/
+			return par;
+		}		
     }
 }
