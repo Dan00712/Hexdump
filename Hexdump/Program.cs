@@ -5,8 +5,8 @@ namespace Hexdump{
         static void Main(string[] args){
 			var tmp = ParseParams(args);
 			if(tmp is not null){
-				System.Console.WriteLine("OFfset:\t{0}", tmp.Offset);
-				System.Console.WriteLine("Lines:\t{0}", tmp.Lines);
+				//System.Console.WriteLine("OFfset:\t{0}", tmp.Offset);
+				//System.Console.WriteLine("Lines:\t{0}", tmp.Lines);
             	Hexdump hexdump= new Hexdump(tmp);
 				hexdump.Generate();
 			}
@@ -46,13 +46,13 @@ namespace Hexdump{
 					
 					case "-l":
 					case "--lines":
-						System.Console.WriteLine("{0}\t{1}", args[i], args[i+1]);
+						//System.Console.WriteLine("{0}\t{1}", args[i], args[i+1]);
 						par.Lines = int.Parse(args[++i]);
 						break;
 
 					case "-o":
 					case "--offset":
-						System.Console.WriteLine("{0}\t{1}", args[i], args[i+1]);
+						//System.Console.WriteLine("{0}\t{1}", args[i], args[i+1]);
 						par.Offset = int.Parse(args[++i]);
 						break;
 					
